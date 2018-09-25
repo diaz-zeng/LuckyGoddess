@@ -12,6 +12,11 @@ public class RegistrationProcess
 
 	public RegistrationProcess()
 	{
+		
+		
+	}
+	public void start()
+	{
 		String name,password;
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("请填写个人信息");
@@ -19,17 +24,16 @@ public class RegistrationProcess
 		name= scanner.nextLine();
 		System.out.print("密码:");
 		password = scanner.nextLine();
-		String id =getRandomID(); 
+		String id =getRandomID();
 		UserTemplate userTemplate = new UserTemplate(name, id, password);
-		
+		writeToFile(JSON.toJSONString(userTemplate), id);
 	}
-	
 	private String getRandomID()
 	{
 		String id = "";
 		for(int i = 0;i<4;i++)
 		{
-			int temp = (int)Math.random()*10;
+			int temp = (int)((Math.random()*100)%10);
 			id+=temp;
 		}
 		return id;
@@ -49,7 +53,7 @@ public class RegistrationProcess
 		} catch (Exception e)
 		{
 			// TODO: handle exception
-		
+			e.printStackTrace();
 		}
 	}
 }

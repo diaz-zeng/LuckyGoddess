@@ -10,6 +10,7 @@ public class LuckyGoddess
 	{
 		// TODO Auto-generated method stub
 		WelcomeScreen welcomeScreen = new WelcomeScreen();
+		welcomeScreen.start();
 	}
 	
 }
