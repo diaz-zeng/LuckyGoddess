@@ -2,19 +2,25 @@ package edu.diaz.luckygoddess;
 
 import java.util.Scanner;
 
-public class WelcomeScreen
+public class WelcomeScreen implements LuckyGoddessUI
 {
+	
+	public String uiName = "»¶Ó­";
+	
+
 	public WelcomeScreen()
 	{
 		
 	}
+	
+	@Override
 	public void start()
 	{
 		// TODO Auto-generated constructor stub
 				System.out.println("****»¶Ó­½øÈë½±¿Í¸»ÎÌÏµÍ³****");
 				System.out.println("        1.×¢²á                           ");
 				System.out.println("        2.µÇÂ½                           ");
-				System.out.println("        1.³é½±                           ");
+				System.out.println("        3.³é½±                           ");
 				System.out.println("****************************");
 				System.out.print("ÇëÑ¡Ôò£º");
 				int userOption= new Scanner(System.in).nextInt();
@@ -22,28 +28,28 @@ public class WelcomeScreen
 				{
 				case 1:
 				{
-			        System.out.println("[½±¿Í¸»ÎÌÏµÍ³>×¢²á]");
-			        System.out.print("¼ÌÐøÂð?(y/n):");
-			        String chose = new Scanner(System.in).nextLine();
-			        if("y".equals(chose))
-			        {
-			        	RegistrationProcess registrationProcess = new RegistrationProcess();
-			        	registrationProcess.start();
-			        	break;
-			        }
-			        else
-			        {
-			        	System.out.println("³ÌÐòÍË³ö");
-			        	break;
-			        }
+			        
+			        UserOptional.userOptional(new RegistrationProcess());
+			        break;
 					
 				}
 				case 2:
 				{
+					
+					UserOptional.userOptional(new LoginProcess());
 					break;
 				}
 				case 3:
 				{
+					if(LuckyGoddess.isLogin)
+					{
+						UserOptional.userOptional(new LuckyTime());
+					}
+					else
+					{
+						UserOptional.userOptional(new LoginProcess());
+						System.out.println("ÄúÉÐÎ´µÄµÇÂ½£¬ÇëµÇÂ¼");
+					}
 					break;
 				}
 				default:
