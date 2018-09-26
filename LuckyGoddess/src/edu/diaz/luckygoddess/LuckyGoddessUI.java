@@ -1,7 +1,7 @@
 package edu.diaz.luckygoddess;
 
 /**
- * 界面接口，所有的节目需要实现这个接口 
+ * 界面接口，所有的界面需要实现这个接口 
  * @author Diaz
  *
  */
