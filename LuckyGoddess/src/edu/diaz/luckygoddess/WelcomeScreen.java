@@ -1,17 +1,16 @@
 package edu.diaz.luckygoddess;
 
 import java.util.Scanner;
-
+/**
+ * ª∂”≠ΩÁ√Ê
+ * @author Diaz
+ *
+ */
 public class WelcomeScreen implements LuckyGoddessUI
 {
 	
 	public String uiName = "ª∂”≠";
 	
-
-	public WelcomeScreen()
-	{
-		
-	}
 	
 	@Override
 	public void start()

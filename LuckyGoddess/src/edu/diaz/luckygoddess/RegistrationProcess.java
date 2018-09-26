@@ -7,15 +7,16 @@ import java.util.Scanner;
 
 import com.alibaba.fastjson.JSON;
 
+/**
+ * 实现用户注册的类
+ * @author Diaz
+ *
+ */
 public class RegistrationProcess implements LuckyGoddessUI
 {
 
 	public String uiName = "注册";
-	public RegistrationProcess()
-	{
-		
-		
-	}
+	
 	@Override
 	public void start()
 	{
@@ -30,6 +31,10 @@ public class RegistrationProcess implements LuckyGoddessUI
 		UserTemplate userTemplate = new UserTemplate(name, id, password);
 		writeToFile(JSON.toJSONString(userTemplate), name,id,password);
 	}
+	/**
+	 * 获取一个随机的用户ID
+	 * @return 用户ID
+	 */
 	private String getRandomID()
 	{
 		String id = "";
@@ -40,6 +45,11 @@ public class RegistrationProcess implements LuckyGoddessUI
 		}
 		return id;
 	}
+	/*
+	 * 
+	 * 将对象转换为JSON字符串并写入文件
+	 * 
+	 */
 	private void writeToFile(String jsonString,String uName,String uID,String uPassword)
 	{
 		File file;

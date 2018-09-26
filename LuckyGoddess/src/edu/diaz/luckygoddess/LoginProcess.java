@@ -7,14 +7,25 @@ import java.util.Scanner;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 
+
+/**
+ * 实现登陆过程的界面
+ * @author Diaz
+ *
+ */
 public class LoginProcess implements LuckyGoddessUI
 {
 
 	
-	public UserTemplate userTemplate ;
+	public UserTemplate userTemplate;
+	
 	public String uiName = "登陆";
 	
 	@Override
+	/*
+	 * (non-Javadoc)
+	 * @see edu.diaz.luckygoddess.LuckyGoddessUI#start()
+	 */
 	public void start()
 	{
 		// TODO Auto-generated method stub
@@ -27,7 +38,9 @@ public class LoginProcess implements LuckyGoddessUI
 		{
 			
 			LuckyGoddess.isLogin =true;
+			LuckyGoddess.userID = userTemplate.getUserID();
 			System.out.println("欢迎您："+name);
+			LuckyGoddess.user =userTemplate;
 			UserOptional.userOptional(LuckyGoddess.welcomeScreen);
 		}
 		else 
@@ -36,6 +49,10 @@ public class LoginProcess implements LuckyGoddessUI
 			this.start();
 		}
 	}
+	/**
+	 * 从json文件中加载用户对象
+	 * @param name 要加载的用户名
+	 */
 	private void loadUserProfile(String name)
 	{
 		
