@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class WelcomeScreen implements LuckyGoddessUI
 {
 
-	public String uiName = "»¶Ó­";
+//	public static String uiName = "»¶Ó­";
 
 	@Override
 	public void start()
@@ -55,4 +55,11 @@ public class WelcomeScreen implements LuckyGoddessUI
 			break;
 		}
 	}
+
+@Override
+public String getUIName()
+{
+	// TODO Auto-generated method stub
+	return "»¶Ó­";
+}
 }

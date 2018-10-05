@@ -19,7 +19,7 @@ public class LoginProcess implements LuckyGoddessUI
 	
 	public UserTemplate userTemplate;
 	
-	public String uiName = "登陆";
+//	public static String uiName = "登陆";
 	
 	@Override
 	/*
@@ -83,6 +83,12 @@ public class LoginProcess implements LuckyGoddessUI
 			System.out.println("用户不存在");
 			start();
 		}
+	}
+	@Override
+	public String getUIName()
+	{
+		// TODO Auto-generated method stub
+		return "登陆";
 	}
 	
 }

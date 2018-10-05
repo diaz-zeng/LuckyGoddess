@@ -15,7 +15,7 @@ import com.alibaba.fastjson.JSON;
 public class RegistrationProcess implements LuckyGoddessUI
 {
 
-	public String uiName = "зЂВс";
+//	public static String uiName = "зЂВс";
 	
 	@Override
 	public void start()
@@ -72,5 +72,11 @@ public class RegistrationProcess implements LuckyGoddessUI
 			// TODO: handle exception
 			e.printStackTrace();
 		}
+	}
+	@Override
+	public String getUIName()
+	{
+		// TODO Auto-generated method stub
+		return "зЂВс";
 	}
 }

@@ -10,5 +10,5 @@ public interface LuckyGoddessUI
 {
 	public void start();// 启动页面的方法
 
-	public String uiName = "";// 页面的名称
+	public  String getUIName();// 页面的名称
 }

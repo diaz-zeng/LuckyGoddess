@@ -11,7 +11,7 @@ import java.util.Arrays;
 public class LuckyTime implements LuckyGoddessUI
 {
 
-	public String uiName = "³é½±";
+//	public static String uiName = "³é½±";
 	private boolean isWinning = false;
 
 	@Override
@@ -54,6 +54,13 @@ public class LuckyTime implements LuckyGoddessUI
 			luckyNumber[j] = luckyNumberTemp;
 		}
 		return luckyNumber;
+	}
+
+	@Override
+	public String getUIName()
+	{
+		// TODO Auto-generated method stub
+		return "³é½±";
 	}
 
 }
