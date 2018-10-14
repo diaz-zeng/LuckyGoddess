@@ -3,20 +3,20 @@ package edu.diaz.luckygoddess;
 import java.util.Scanner;
 
 /**
- * ½ÓÊÜÓÃ»§Ñ¡Ôñ£¬²¢×÷³öÌø×ªµÄÀà
+ * æ¥å—ç”¨æˆ·é€‰æ‹©ï¼Œå¹¶ä½œå‡ºè·³è½¬çš„ç±»
  * @author Diaz
  *
  */
 public class UserOptional
 {
 	/**
-	 * ´¦ÀíÓÃ»§ÊäÈëµÄÊı¾İ
-	 * @param ui ÒªÌø×ªµÄ½çÃæ
+	 * å¤„ç†ç”¨æˆ·è¾“å…¥çš„æ•°æ®
+	 * @param ui è¦è·³è½¬çš„ç•Œé¢
 	 */
 	public static void userOptional(LuckyGoddessUI ui)
 	{
-		System.out.println("[½±¿Í¸»ÎÌÏµÍ³>"+ui.getUIName()+"]");
-        System.out.print("¼ÌĞøÂğ?(y/n):");
+		System.out.println("[å¥–å®¢å¯Œç¿ç³»ç»Ÿ>"+ui.getUIName()+"]");
+        System.out.print("ç»§ç»­å—?(y/n):");
         String chose = new Scanner(System.in).nextLine();
         if("y".equals(chose))
         {
@@ -24,7 +24,7 @@ public class UserOptional
         }
         else
         {
-        	System.out.println("³ÌĞòÍË³ö");
+        	System.out.println("ç¨‹åºé€€å‡º");
         }
 	}
 }

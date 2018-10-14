@@ -3,7 +3,7 @@ package edu.diaz.luckygoddess;
 import java.util.Scanner;
 
 /**
- * »¶Ó­½çÃæ
+ * æ¬¢è¿ç•Œé¢
  * 
  * @author Diaz
  *
@@ -11,18 +11,18 @@ import java.util.Scanner;
 public class WelcomeScreen implements LuckyGoddessUI
 {
 
-//	public static String uiName = "»¶Ó­";
+//	public static String uiName = "æ¬¢è¿";
 
 	@Override
 	public void start()
 	{
 		// TODO Auto-generated constructor stub
-		System.out.println("****»¶Ó­½øÈë½±¿Í¸»ÎÌÏµÍ³****");
-		System.out.println("        1.×¢²á                           ");
-		System.out.println("        2.µÇÂ½                           ");
-		System.out.println("        3.³é½±                           ");
+		System.out.println("****æ¬¢è¿è¿›å…¥å¥–å®¢å¯Œç¿ç³»ç»Ÿ****");
+		System.out.println("        1.æ³¨å†Œ                           ");
+		System.out.println("        2.ç™»é™†                           ");
+		System.out.println("        3.æŠ½å¥–                           ");
 		System.out.println("****************************");
-		System.out.print("ÇëÑ¡Ôò£º");
+		System.out.print("è¯·é€‰åˆ™ï¼š");
 		int userOption = new Scanner(System.in).nextInt();
 		switch (userOption)
 		{
@@ -47,7 +47,7 @@ public class WelcomeScreen implements LuckyGoddessUI
 			} else
 			{
 				UserOptional.userOptional(new LoginProcess());
-				System.out.println("ÄúÉĞÎ´µÄµÇÂ½£¬ÇëµÇÂ¼");
+				System.out.println("æ‚¨å°šæœªçš„ç™»é™†ï¼Œè¯·ç™»å½•");
 			}
 			break;
 		}
@@ -60,6 +60,6 @@ public class WelcomeScreen implements LuckyGoddessUI
 public String getUIName()
 {
 	// TODO Auto-generated method stub
-	return "»¶Ó­";
+	return "æ¬¢è¿";
 }
 }

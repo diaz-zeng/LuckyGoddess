@@ -1,14 +1,14 @@
 package edu.diaz.luckygoddess;
 
 /**
- * ½çÃæ½Ó¿Ú£¬ËùÓĞµÄ½çÃæĞèÒªÊµÏÖÕâ¸ö½Ó¿Ú
+ * ç•Œé¢æ¥å£ï¼Œæ‰€æœ‰çš„ç•Œé¢éœ€è¦å®ç°è¿™ä¸ªæ¥å£
  * 
  * @author Diaz
  *
  */
 public interface LuckyGoddessUI
 {
-	public void start();// Æô¶¯Ò³ÃæµÄ·½·¨
+	public void start();// å¯åŠ¨é¡µé¢çš„æ–¹æ³•
 
-	public  String getUIName();// Ò³ÃæµÄÃû³Æ
+	public  String getUIName();// é¡µé¢çš„åç§°
 }

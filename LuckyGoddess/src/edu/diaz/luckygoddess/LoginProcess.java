@@ -9,7 +9,7 @@ import com.alibaba.fastjson.JSONObject;
 
 
 /**
- * ÊµÏÖµÇÂ½¹ı³ÌµÄ½çÃæ
+ * å®ç°ç™»é™†è¿‡ç¨‹çš„ç•Œé¢
  * @author Diaz
  *
  */
@@ -19,7 +19,7 @@ public class LoginProcess implements LuckyGoddessUI
 	
 	public UserTemplate userTemplate;
 	
-//	public static String uiName = "µÇÂ½";
+//	public static String uiName = "ç™»é™†";
 	
 	@Override
 	/*
@@ -29,29 +29,29 @@ public class LoginProcess implements LuckyGoddessUI
 	public void start()
 	{
 		// TODO Auto-generated method stub
-		System.out.println("ÇëÊäÈçÓÃ»§Ãû£º");
+		System.out.println("è¯·è¾“å¦‚ç”¨æˆ·åï¼š");
 		String name = new Scanner(System.in).nextLine();
 		loadUserProfile(name);
-		System.out.println("ÇëÊäÈëÃÜÂë£º");
+		System.out.println("è¯·è¾“å…¥å¯†ç ï¼š");
 		String password = new Scanner(System.in).nextLine();
 		if(password.equals(userTemplate.getUserPassword()))
 		{
 			
 			LuckyGoddess.isLogin =true;
 			LuckyGoddess.userID = userTemplate.getUserID();
-			System.out.println("»¶Ó­Äú£º"+name);
+			System.out.println("æ¬¢è¿æ‚¨ï¼š"+name);
 			LuckyGoddess.user =userTemplate;
 			UserOptional.userOptional(LuckyGoddess.welcomeScreen);
 		}
 		else 
 		{
-			System.out.println("ÃÜÂë´íÎó");
+			System.out.println("å¯†ç é”™è¯¯");
 			this.start();
 		}
 	}
 	/**
-	 * ´ÓjsonÎÄ¼şÖĞ¼ÓÔØÓÃ»§¶ÔÏó
-	 * @param name Òª¼ÓÔØµÄÓÃ»§Ãû
+	 * ä»jsonæ–‡ä»¶ä¸­åŠ è½½ç”¨æˆ·å¯¹è±¡
+	 * @param name è¦åŠ è½½çš„ç”¨æˆ·å
 	 */
 	private void loadUserProfile(String name)
 	{
@@ -80,7 +80,7 @@ public class LoginProcess implements LuckyGoddessUI
 		}
 		else
 		{
-			System.out.println("ÓÃ»§²»´æÔÚ");
+			System.out.println("ç”¨æˆ·ä¸å­˜åœ¨");
 			start();
 		}
 	}
@@ -88,7 +88,7 @@ public class LoginProcess implements LuckyGoddessUI
 	public String getUIName()
 	{
 		// TODO Auto-generated method stub
-		return "µÇÂ½";
+		return "ç™»é™†";
 	}
 	
 }

@@ -3,7 +3,7 @@ package edu.diaz.luckygoddess;
 import java.util.Arrays;
 
 /**
- * ÓÃÓÚÊµÏÖ³é½±¹¦ÄÜµÄ½çÃæÀà
+ * ç”¨äºå®ç°æŠ½å¥–åŠŸèƒ½çš„ç•Œé¢ç±»
  * 
  * @author Diaz
  *
@@ -11,7 +11,7 @@ import java.util.Arrays;
 public class LuckyTime implements LuckyGoddessUI
 {
 
-//	public static String uiName = "³é½±";
+//	public static String uiName = "æŠ½å¥–";
 	private boolean isWinning = false;
 
 	@Override
@@ -23,22 +23,22 @@ public class LuckyTime implements LuckyGoddessUI
 	public void start()
 	{
 		// TODO Auto-generated method stub
-		System.out.println("»¶Ó­Äã£º" + LuckyGoddess.user.getUserName());
-		System.out.println("ÄúµÄ»áÔ±IDÊÇ£º" + LuckyGoddess.userID);
+		System.out.println("æ¬¢è¿ä½ ï¼š" + LuckyGoddess.user.getUserName());
+		System.out.println("æ‚¨çš„ä¼šå‘˜IDæ˜¯ï¼š" + LuckyGoddess.userID);
 		String[] result = getLuckyNumber();
-		System.out.println("ÖĞ½±ºÅÂëÎª£º" + Arrays.toString(result));
+		System.out.println("ä¸­å¥–å·ç ä¸ºï¼š" + Arrays.toString(result));
 		for (String string : result)
 		{
 			isWinning = string.equals(LuckyGoddess.userID) ? true : false;
 		}
-		System.out.println(isWinning ? "¹§Ï²ÄúÖĞ½±ÁË£¡" : "ºÜÒÅº¶ÄúÎ´ÖĞ½±ÇëÔÙ½ÓÔÙÀø£¡");
+		System.out.println(isWinning ? "æ­å–œæ‚¨ä¸­å¥–äº†ï¼" : "å¾ˆé—æ†¾æ‚¨æœªä¸­å¥–è¯·å†æ¥å†åŠ±ï¼");
 		UserOptional.userOptional(LuckyGoddess.welcomeScreen);
 	}
 
 	/**
-	 * »ñÈ¡ÖĞ½±ºÅÂë
+	 * è·å–ä¸­å¥–å·ç 
 	 * 
-	 * @return ÖĞ½±ºÅÂë
+	 * @return ä¸­å¥–å·ç 
 	 */
 	public String[] getLuckyNumber()
 	{
@@ -60,7 +60,7 @@ public class LuckyTime implements LuckyGoddessUI
 	public String getUIName()
 	{
 		// TODO Auto-generated method stub
-		return "³é½±";
+		return "æŠ½å¥–";
 	}
 
 }

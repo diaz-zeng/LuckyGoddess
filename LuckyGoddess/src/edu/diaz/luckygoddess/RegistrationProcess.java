@@ -8,32 +8,32 @@ import java.util.Scanner;
 import com.alibaba.fastjson.JSON;
 
 /**
- * ÊµÏÖÓÃ»§×¢²áµÄÀà
+ * å®ç°ç”¨æˆ·æ³¨å†Œçš„ç±»
  * @author Diaz
  *
  */
 public class RegistrationProcess implements LuckyGoddessUI
 {
 
-//	public static String uiName = "×¢²á";
+//	public static String uiName = "æ³¨å†Œ";
 	
 	@Override
 	public void start()
 	{
 		String name,password;
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("ÇëÌîĞ´¸öÈËĞÅÏ¢");
-		System.out.print("ĞÕÃû:");
+		System.out.println("è¯·å¡«å†™ä¸ªäººä¿¡æ¯");
+		System.out.print("å§“å:");
 		name= scanner.nextLine();
-		System.out.print("ÃÜÂë:");
+		System.out.print("å¯†ç :");
 		password = scanner.nextLine();
 		String id =getRandomID();
 		UserTemplate userTemplate = new UserTemplate(name, id, password);
 		writeToFile(JSON.toJSONString(userTemplate), name,id,password);
 	}
 	/**
-	 * »ñÈ¡Ò»¸öËæ»úµÄÓÃ»§ID
-	 * @return ÓÃ»§ID
+	 * è·å–ä¸€ä¸ªéšæœºçš„ç”¨æˆ·ID
+	 * @return ç”¨æˆ·ID
 	 */
 	private String getRandomID()
 	{
@@ -47,7 +47,7 @@ public class RegistrationProcess implements LuckyGoddessUI
 	}
 	/*
 	 * 
-	 * ½«¶ÔÏó×ª»»ÎªJSON×Ö·û´®²¢Ğ´ÈëÎÄ¼ş
+	 * å°†å¯¹è±¡è½¬æ¢ä¸ºJSONå­—ç¬¦ä¸²å¹¶å†™å…¥æ–‡ä»¶
 	 * 
 	 */
 	private void writeToFile(String jsonString,String uName,String uID,String uPassword)
@@ -62,8 +62,8 @@ public class RegistrationProcess implements LuckyGoddessUI
 			fwFileWriter.write(jsonString);
 			fwFileWriter.flush();
 			fwFileWriter.close();
-			System.out.println("×¢²á³É¹¦£¬Çë¼ÇºÃÄúµÄ»áÔ±¿¨ºÅºÍÃÜÂë");
-			System.out.println("ÓÃ»§Ãû\tÃÜÂë\t»áÔ±¿¨ºÅ");
+			System.out.println("æ³¨å†ŒæˆåŠŸï¼Œè¯·è®°å¥½æ‚¨çš„ä¼šå‘˜å¡å·å’Œå¯†ç ");
+			System.out.println("ç”¨æˆ·å\tå¯†ç \tä¼šå‘˜å¡å·");
 			System.out.println(uName+"\t"+uPassword+"\t"+uID);
 			UserOptional.userOptional(LuckyGoddess.welcomeScreen);
 			
@@ -77,6 +77,6 @@ public class RegistrationProcess implements LuckyGoddessUI
 	public String getUIName()
 	{
 		// TODO Auto-generated method stub
-		return "×¢²á";
+		return "æ³¨å†Œ";
 	}
 }

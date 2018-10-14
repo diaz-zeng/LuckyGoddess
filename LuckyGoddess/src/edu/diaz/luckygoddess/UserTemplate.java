@@ -2,7 +2,7 @@ package edu.diaz.luckygoddess;
 
 
 /**
- * ÓÃ»§¶ÔÏóÄ£°åÀà
+ * ç”¨æˆ·å¯¹è±¡æ¨¡æ¿ç±»
  * @author Diaz
  *
  */
@@ -13,10 +13,10 @@ public class UserTemplate
 	private String userPassword;
 
 	/**
-	 * ¹¹Ôìº¯Êı
-	 * @param name ÓÃ»§Ãû
+	 * æ„é€ å‡½æ•°
+	 * @param name ç”¨æˆ·å
 	 * @param id ID
-	 * @param password ÃÜÂë
+	 * @param password å¯†ç 
 	 */
 	public UserTemplate(String name, String id, String password)
 	{

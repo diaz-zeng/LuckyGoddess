@@ -3,18 +3,18 @@ package edu.diaz.luckygoddess;
 
 import java.util.Scanner;
 /**
- * ³ÌĞòÖ÷Àà
+ * ç¨‹åºä¸»ç±»
  * @author Diaz
  *
  */
 public class LuckyGoddess
 {
-	public static WelcomeScreen welcomeScreen;//»¶Ó­½çÃæ£¬Õû¸ö³ÌĞòµÄÉúÃüÖÜÆÚÖĞÖ»ÓĞÒ»¸ö»¶Ó­½çÃæ
-	public static boolean isLogin = false;//±êÊ¶µ±Ç°ÓÃ»§ÊÇ·ñµÇÂ½
-	public static String userID = "";//µ±Ç°ÓÃ»§µÄID
-	public static UserTemplate user;//µ±Ç°ÓÃ»§µÄ¶ÔÏó
+	public static WelcomeScreen welcomeScreen;//æ¬¢è¿ç•Œé¢ï¼Œæ•´ä¸ªç¨‹åºçš„ç”Ÿå‘½å‘¨æœŸä¸­åªæœ‰ä¸€ä¸ªæ¬¢è¿ç•Œé¢
+	public static boolean isLogin = false;//æ ‡è¯†å½“å‰ç”¨æˆ·æ˜¯å¦ç™»é™†
+	public static String userID = "";//å½“å‰ç”¨æˆ·çš„ID
+	public static UserTemplate user;//å½“å‰ç”¨æˆ·çš„å¯¹è±¡
 	/**
-	 * ³ÌĞòµÄÖ÷Èë¿Ú
+	 * ç¨‹åºçš„ä¸»å…¥å£
 	 * @param args
 	 */
 	public static void main(String[] args)
